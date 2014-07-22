@@ -8,18 +8,18 @@ require_dependency 'auth/open_id_authenticator'
 class BloombergAuthenticator < ::Auth::OpenIdAuthenticator
 
   def after_authenticate(auth)
-    Rails.logger.info "after_authenticate"
-    Rails.logger.info "auth"
-    Rails.logger.info auth.inspect
+    puts "after_authenticate"
+    puts "auth"
+    p auth
     super
   end
 
   def after_create_account(user, auth)
-    Rails.logger.info "after_create_account"
-    Rails.logger.info "user"
-    Rails.logger.info user.inspect
-    Rails.logger.info "auth"
-    Rails.logger.info auth.inspect
+    puts "after_create_account"
+    puts "user"
+    p user
+    puts "auth"
+    p auth
     super
   end
 
