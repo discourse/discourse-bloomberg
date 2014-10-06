@@ -5,7 +5,7 @@
 
 require_dependency 'auth/open_id_authenticator'
 
-authenticator = ::Auth::OpenIdAuthenticator.new("bloomberg", "https://bauth.bloomberg.com/user", trusted: true)
+authenticator = ::Auth::OpenIdAuthenticator.new("bloomberg", "https://bauth2.bloomberg.com/user", trusted: true)
 
 auth_provider title: "Bloomberg",
               authenticator: authenticator,
